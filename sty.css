@@ -1,0 +1,124 @@
+
+:root {
+    /* Common for both themes */
+    --min_width_containers: 400px;
+
+    /* Light Theme */
+    --primary-color: white;
+    --secondary-color: black;
+    --header-shadow: -4px 6px 9px #837a7a;
+    --box-shadow-light: -3px 7px 9px 7px #b0b0b0;
+    --box-radius: 50px;
+}
+
+.darktheme {
+    /* Dark theme */
+    --primary-color: black;
+    --secondary-color: white;
+    --header-shadow: -5px 0px 4px #4315d7, 2px -1px 4px #ff0000;
+    --timer_container_bg: linear-gradient(180deg, #000000, #4315d74d, #69a1d847, #000000);
+    --box-shadow-light: 0px 0px 10px 2px #212020a1;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.theme_holder{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+/* Theme icon button */
+#theme_switch {
+    width: 40px;
+    padding: 0;
+    border: 0;
+    border: 3px solid white;
+    outline: none;
+    border-radius: 25px;
+    background-blend-mode: color-burn;
+}
+
+/* Major Page Divider */
+.g-col-md-4 {
+    height: 33vh;
+}
+
+.heading_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header styling */
+.app_header {
+    letter-spacing: 5.7vw;
+    margin-left: 5rem;
+    text-shadow: var(--header-shadow);
+}
+
+/* Main Container */
+.main_container {
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* timer container  Digits + Labels */
+.timer_container {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: var(--box-radius);
+    box-shadow: var(--box-shadow-light);
+    background-image: var(--timer_container_bg);
+    min-width: var(--min_width_containers);
+}
+
+/* Timer Digit Display */
+.timer_display {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Each segment of time */
+.segments {
+    width: 30%;
+}
+
+/* Timer Labels container */
+.timer_information {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.timer_information span {
+    width: 100%;
+}
+
+/* Stopwatch controls */
+.stopwatch_controls {
+    height: 20%;
+    margin-top: 24px;
+    min-width: var(--min_width_containers);
+}
+
+/* Buttons */
+.bton {
+    border-radius: 25px;
+    width: 5.3rem;
+    box-shadow: -2px 4px 10px 1px #000000a6;
+}
+
+/* To adjust the heading on small screen */
+@media only screen and (max-width: 850px) {
+    .heading_container {
+        width: 100%;
+    }
+}
